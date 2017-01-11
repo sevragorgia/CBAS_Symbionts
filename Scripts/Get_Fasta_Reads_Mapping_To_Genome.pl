@@ -24,6 +24,14 @@ my $help = "The following options have to be provided:
 A normal command line would look like:
 	perl Get_Fasta_Reads_Mapping_To_Genome.pl --fasta_file cbas_nanopore.fasta --mappings all_nanopore_mapping.sam uniprot --out cbas_mapping_nanopore.fasta
 
+NOTE: before running the script you need to filter the sam file produced by graphmap. For this you can use grep, for instance, if the sequences in the reference have a common name, say NODE, you can filter all lines containing that word. These lines are query sequences that matched one of the reference sequences, then use the script to extract the sequences of interest.
+
+So, run:
+
+grep "NODE" file.sam >filtered.file.sam
+
+then run the script on the filtered sam file to extract the sequences.
+
 ";
 
 #get options from command line

@@ -110,7 +110,7 @@ sub main {
     my @table_fields = split("\t");
     
     #note that the sequences have the same name in both files!
-    if(exists $sequence_hash{$table_fields[0]}){
+    if($table_fields[2] neq "*" && exists $sequence_hash{$table_fields[0]}){
         
         print $output ">", $table_fields[0], "\n",  $sequence_hash{$table_fields[0]}, "\n";
     

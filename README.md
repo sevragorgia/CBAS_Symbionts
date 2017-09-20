@@ -18,9 +18,9 @@ Usage:
 
 assuming you cloned this repo in ~/Repos/CBAS_Symbionts
 
-cd directory_where_genomes_will_be_saved
+    cd directory_where_genomes_will_be_saved
 
-bash ~/Repos/CBAS_Symbionts/Scripts/get_genomes_from_ftp.sh . ./genome_list.txt 5 
+    bash ~/Repos/CBAS_Symbionts/Scripts/get_genomes_from_ftp.sh . ./genome_list.txt 5 
 
 which basically, pass the script the current working directory (.), the list of genomes to download, and an integer to avoid wget created the whole directory structure of the ncbi ftp. You can play around with this number.
  

@@ -1,0 +1,9 @@
+# CBAS Symbiont resources
+
+This repository provides a number of scripts to work with bacterial genomes deposited in the NCBI ftp server and a number of scripts I use to compare these genomes against the genomes of CBAS Symbionts.
+
+NOTE:
+
+most of these scripts are bash scripts. I know, I know... but sorry, I love bash scripts. They should run fine in almost all linux distributions. I try to document their usage in this **README**.
+
+

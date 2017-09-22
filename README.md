@@ -67,7 +67,25 @@ The script will use the file name of the multifasta file to generate the file na
 
 ### blast_fasta_against_genomes.sh
 
-This script can be used to blast all proteins in a genome of interest agains a blast db containing all the proteins in another genome.
+This script can be used to blast the set of proteins in a genome of interest against a blast db containing proteins present in another genome. If you have multiple folders with genomes, each with a blast db, you can use the script to blast the set of proteins agains all genomes.
+
+Assuming your CWD is the folder where you genomes are stored:
+
+Usage:
+
+    bash ~/Repos/CBAS_Symbionts/Scripts/blast_fasta_against_genomes.sh Path_to_tarball_with_protein_fasta_files Path_to_genomes_root max_number_of_sequences evalue
+    bash ~/Repos/CBAS_Symbionts/Scripts/blast_fasta_against_genomes.sh ~/Repos/CBAS_Symbionts/Sspongiarum/CBAS_Sspongiarum_proteins.tar.gz . 1 1e-3
+
+this will:
+
+- unzip the tarball in the genome root (.)
+- blast each protein fasta file against all the genomes in the genome root and save an output file with the same name of the protein fasta file. These output files will be saved inside each of the genome folders.
+
+
+
+
+
+
 
 
 

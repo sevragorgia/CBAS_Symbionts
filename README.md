@@ -43,13 +43,21 @@ Note that you can use whatever arbitrary second parameter to select other files 
 This is a small script to split a multifasta file containing N sequences like:
 
 \>header0
+
 Sequence0
+
 \>header1
+
 Sequence1
+
 .
+
 .
+
 .
+
 \>headerN
+
 SequenceN
 
 

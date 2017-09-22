@@ -88,11 +88,11 @@ This script can be run after blast_fasta_against_genomes.sh has been used to pro
 
 Usage:
 
-    bash ~/Repos/CBAS_Symbionts/Scripts/Sort_proteins_by_presence_absence.sh Path_to_genomes_root
+    bash ~/Repos/CBAS_Symbionts/Scripts/Sort_proteins_by_presence_absence.sh Suffix_of_output_files
 
 Assuming your cwd is the folder where all the genomes are stored:
 
-    bash ~/Repos/CBAS_Symbionts/Scripts/Sort_proteins_by_presence_absence.sh .
+    bash ~/Repos/CBAS_Symbionts/Scripts/Sort_proteins_by_presence_absence.sh CBAS_
 
 
 

@@ -17,10 +17,10 @@ for folder in `ls -d */`; do
 		if [ -s $file ]
 		then
 			echo "$file is present"
-			echo mv $file ./Proteins_Present/
+			cp -v $file ./Proteins_Present/
 		else
 			echo "$file is absent"
-			echo mv $file ./Proteins_Absent/
+			cp -v $file ./Proteins_Absent/
 		fi
 	done
 

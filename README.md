@@ -38,4 +38,39 @@ Usage:
 
 Note that you can use whatever arbitrary second parameter to select other files in the folder, say for instance you don't want the CDSs but the genomic contigs, you can use \_genomic.fna as the parameter to tell the script to unzip this file and use it to build a blastdb with it. Also note that only nucl and prot are valid first parameters and that these are the makeblastdb options to indicate whether the DB is protein or nucleotides. I am not catching any errors here, blast will not work if you use something different here.
 
+### split_multifasta.sh
+
+This is a small script to split a multifasta file containing N sequences like:
+
+>header0
+Sequence0
+>header1
+Sequence1
+.
+.
+.
+>headerN
+SequenceN
+
+
+into N files with only one sequence. This is useful to get the blast agains the genomes easily done, as one can use each fasta file as blast input.
+
+Usage:
+
+    bash split_multifasta ~/path_to_multifasta_file Number_of_lines_to_split_the_file
+
+In the case of the example above:
+
+    bash split_multifasta ~/path_to_multifasta_file 2
+
+The script will use the file name of the multifasta file to generate the file names of the new fasta files. A number will be appended to the file name.
+
+
+### blast_fasta_against_genomes.sh
+
+This script can be used to blast all proteins in a genome of interest agains a blast db containing all the proteins in another genome.
+
+
+
+
 

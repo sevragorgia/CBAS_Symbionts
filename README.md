@@ -82,6 +82,18 @@ this will:
 - blast each protein fasta file against all the genomes in the genome root and save an output file with the same name of the protein fasta file. These output files will be saved inside each of the genome folders.
 
 
+### Sort_proteins_by_presence_absence.sh
+
+This script can be run after blast_fasta_against_genomes.sh has been used to produce blast outfiles per protein of interest. It takes advantage of the fact that if a match for a given protein cannot be found using blast, blast produces an empty output file. This script will sort empty output files into a folder called Proteins_Absent and files with some content into a folder called Proteins_Present.
+
+Usage:
+
+    bash ~/Repos/CBAS_Symbionts/Scripts/Sort_proteins_by_presence_absence.sh Path_to_genomes_root
+
+Assuming your cwd is the folder where all the genomes are stored:
+
+    bash ~/Repos/CBAS_Symbionts/Scripts/Sort_proteins_by_presence_absence.sh .
+
 
 
 

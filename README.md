@@ -84,15 +84,15 @@ this will:
 
 ### Sort_proteins_by_presence_absence.sh
 
-This script can be run after blast_fasta_against_genomes.sh has been used to produce blast outfiles per protein of interest. It takes advantage of the fact that if a match for a given protein cannot be found using blast, blast produces an empty output file. This script will sort empty output files into a folder called Proteins_Absent and files with some content into a folder called Proteins_Present.
+This script can be run after blast_fasta_against_genomes.sh has been used to produce blast outfiles per protein of interest. It takes advantage of the fact that if a match for a given protein cannot be found using blast, blast produces an empty output file. This script will sort empty output files into a folder called Proteins_Absent and files with some content into a folder called Proteins_Present. While the files are sorted the script produces output of indicating the genome name, the protein name and whether it is present or absent in the genome. If this output is catched it produces a table with the presence/absence of the proteins by genome. This table can be used in further analyses.
 
 Usage:
 
-    bash ~/Repos/CBAS_Symbionts/Scripts/Sort_proteins_by_presence_absence.sh Suffix_of_output_files
+    bash ~/Repos/CBAS_Symbionts/Scripts/Sort_proteins_by_presence_absence.sh Suffix_of_output_files >output_file.csv
 
 Assuming your cwd is the folder where all the genomes are stored:
 
-    bash ~/Repos/CBAS_Symbionts/Scripts/Sort_proteins_by_presence_absence.sh CBAS_
+    bash ~/Repos/CBAS_Symbionts/Scripts/Sort_proteins_by_presence_absence.sh CBAS_ >presence_absence_by_genome_table.csv
 
 
 

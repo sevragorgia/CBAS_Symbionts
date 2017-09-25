@@ -2,8 +2,10 @@
 
 SUFFIX=$1
 
+echo "Genome	Protein	Presence/Absence"
+
 for folder in `ls -d */`; do
-	echo $folder
+	#echo $folder
 
 	cd $folder
 
@@ -12,14 +14,14 @@ for folder in `ls -d */`; do
 
 	for file in `ls $SUFFIX*`; do
 
-		echo $file
+		#echo $file
 
 		if [ -s $file ]
 		then
-			echo "$file is present"
+			echo "$folder	$file	Present"
 			cp -v $file ./Proteins_Present/
 		else
-			echo "$file is absent"
+			echo "$folder	$file	Absent"
 			cp -v $file ./Proteins_Absent/
 		fi
 	done
